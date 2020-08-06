@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../stylesheets/App.scss';
+import '../stylesheets/backgroundSpace.scss';
+import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import CharactersList from './CharactersList';
+import CharactersDetails from './CharactersDetails';
+import getDataCharacterApi from '../data/getDataCharacterApi';
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getDataCharacterApi().then((data) => {
+      setData(data.results);
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <h1>Hola Mundo</h1>
-    </div>
+    <>
+      <Filters />
+      <CharactersList data={data} />
+    </>
   );
 }
 
