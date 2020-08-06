@@ -1,0 +1,17 @@
+.header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__title{
+    width: 300px;
+
+    & img{
+        width: 100%;
+    }
+
+    @media all and (min-width: 768px){
+      width: 500px;
+    }
+}

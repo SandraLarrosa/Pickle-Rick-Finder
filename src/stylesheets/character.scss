@@ -1,0 +1,114 @@
+.card__character {
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  padding: 5px;
+  flex-direction: column;
+  width: 200px;
+  height: 350px;
+  border: 2px solid greenyellow;
+  border-radius: 10px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 0px 10px 1px rgb(199, 248, 65);
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: background-color;
+
+  &:hover{
+    animation-name: hvr-bob-float, hvr-bob;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate;
+    background-color: rgba(82, 112, 22, 0.849);
+  }
+}
+
+.card__contentImg {
+  border-radius: 50%;
+  align-self: center;
+  width: 200px;
+  height: 190px;
+  background: url('../images/background-photo.png') no-repeat center;
+  background-size: 190px;
+
+  &__img {
+    margin: auto;
+    padding-top: 20px;
+    width: 150px;
+
+    & img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.card__contentData {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+
+  &__name{
+      font-size: 20px;
+      height: 70px;
+      text-align: center;
+      padding-top: 5px;
+      color: yellowgreen;
+  }
+
+  &__specie{
+      display: flex;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      &--title {
+          font-weight: bold;
+          color: rgb(88, 180, 3);
+          padding-right: 5px;
+      }
+
+      &--specie {
+          color: rgb(214, 238, 127);
+      }
+  }
+
+  &__status{
+      align-self: center;
+
+      & img{
+          width: 30px;
+      }
+  }
+}
+
+
+/* ANIMACIONES */
+
+@keyframes hvr-bob {
+    0% {
+      transform: translateY(-8px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes hvr-bob-float {
+    100% {
+      transform: translateY(-8px);
+    }
+  }
+
+
+  /* Hack to improve aliasing on mobile/tablet devices */
+
