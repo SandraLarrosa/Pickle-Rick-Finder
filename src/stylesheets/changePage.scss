@@ -1,7 +1,8 @@
 .contain__selectPage{
     max-width: 1200px;
+    margin: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 
     & .prev__page {
         display: flex;
@@ -15,6 +16,7 @@
         }
 
         & p{
+            width: 80px;
             font-size: 10px;
             color: yellowgreen;
             text-transform: uppercase;
@@ -31,6 +33,7 @@
         }
 
         & p{
+            width: 80px;
             font-size: 10px;
             color: yellowgreen;
             text-transform: uppercase;
