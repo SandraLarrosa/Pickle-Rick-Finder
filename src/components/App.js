@@ -38,7 +38,6 @@ function App() {
   const renderCharacterDetail = (props) => {
     const characterId = props.match.params.id;
     const nextPage = Math.floor(characterId / 20);
-    console.log(nextPage);
     if (characterId % 20 === 0) {
       setPage(nextPage)
     } else {
@@ -69,9 +68,9 @@ function App() {
         <Route exact path='/characters'>
           <TitleMain />
           <Filters inputSearch={handleSearch} value={filterName} />
-          <ChangePage changePage={handleChangePage} />
+          <ChangePage changePage={handleChangePage} dataPage={page}/>
           <CharactersList data={filterCharacters} />
-          <ChangePage changePage={handleChangePage} />
+          <ChangePage changePage={handleChangePage} dataPage={page}/>
         </Route>
         <Route path='/characters/:id' render={renderCharacterDetail} />
       </Switch>

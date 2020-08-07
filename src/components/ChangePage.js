@@ -3,6 +3,7 @@ import IconNextPage from '../images/icons8-next-page-200.png';
 import '../stylesheets/changePage.scss';
 
 const ChangePage = (props) => {
+
   const changePageCharacter = (ev) => {
     const buttonPage = ev.currentTarget.id;
     props.changePage(buttonPage);
@@ -19,6 +20,7 @@ const ChangePage = (props) => {
           ></img>
           <p>Previous Page</p>
         </div>
+        <p className="number__page">Page {props.dataPage} of 30</p>
         <div className='next__page'>
           <img
             id='next'
