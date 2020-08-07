@@ -13,7 +13,7 @@ import ChangePage from './ChangePage';
 function App() {
   const [data, setData] = useState([]);
   const [filterName, setFilterName] = useState('');
-  const [page, setPage] = useState(5);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     getDataCharacterApi(page).then((data) => {
@@ -44,11 +44,9 @@ function App() {
 
   const handleChangePage = (ev) => {
     const buttonPage = ev.currentTarget.id;
-    console.log(buttonPage);
-    console.log(page);
-    if (buttonPage === 'prev') {
+    if (buttonPage === 'prev' && page > 1) {
       console.log('Estoy dando a prev', page);
-    } else {
+    } else if (buttonPage === 'next' && page < 30) {
       console.log('Estoy dando a next', page);
     }
   };

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Pickle from './Pickle';
 import '../stylesheets/title.scss';
 import TitleRickAndMorty from '../images/title-cards.png';
 
