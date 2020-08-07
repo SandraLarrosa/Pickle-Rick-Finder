@@ -42,14 +42,11 @@ function App() {
     return <CharactersDetails data={foundCharacter} />;
   };
 
-  const handleChangePage = (ev) => {
-    const buttonPage = ev.currentTarget.id;
-    if (buttonPage === 'prev' && page > 1) {
+  const handleChangePage = (button) => {
+    if (button === 'prev' && page > 1) {
       setPage(page - 1)
-      console.log('Estoy dando a prev', page);
-    } else if (buttonPage === 'next' && page < 30) {
+    } else if (button === 'next' && page < 30) {
       setPage(page + 1)
-      console.log('Estoy dando a next', page);
     }
   };
 
@@ -60,7 +57,7 @@ function App() {
         <Route exact path='/characters'>
           <TitleMain />
           <Filters inputSearch={handleSearch} value={filterName} />
-          <ChangePage changePage={handleChangePage} pageNumber={page} />
+          <ChangePage changePage={handleChangePage} />
           <CharactersList data={filterCharacters} />
         </Route>
         <Route path='/character/:id' render={renderCharacterDetail} />

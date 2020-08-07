@@ -3,8 +3,9 @@ import IconNextPage from '../images/icons8-next-page-200.png';
 import '../stylesheets/changePage.scss';
 
 const ChangePage = (props) => {
-    const changePageCharacter = (ev) => {
-        props.changePage(ev)
+  const changePageCharacter = (ev) => {
+    const buttonPage = ev.currentTarget.id;
+    props.changePage(buttonPage);
   };
   return (
     <>
