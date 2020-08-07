@@ -44,9 +44,9 @@ function App() {
 
   const handleChangePage = (button) => {
     if (button === 'prev' && page > 1) {
-      setPage(page - 1)
+      setPage(page - 1);
     } else if (button === 'next' && page < 30) {
-      setPage(page + 1)
+      setPage(page + 1);
     }
   };
 
@@ -59,6 +59,7 @@ function App() {
           <Filters inputSearch={handleSearch} value={filterName} />
           <ChangePage changePage={handleChangePage} />
           <CharactersList data={filterCharacters} />
+          <ChangePage changePage={handleChangePage} />
         </Route>
         <Route path='/character/:id' render={renderCharacterDetail} />
       </Switch>
