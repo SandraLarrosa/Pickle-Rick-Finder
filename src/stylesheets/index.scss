@@ -1,9 +1,19 @@
+@font-face {
+  font-family: 'Shlop';
+  src: url('../fonts/shlop-rg.ttf') format('truetype');
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-transform: none;
-  font-family: 'Roboto', sans-serif;
+  color: green;
+  font-family: 'Space Mono', monospace;
+  
 }
-

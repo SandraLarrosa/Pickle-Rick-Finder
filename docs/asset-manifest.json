@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.b7a9909f.chunk.css",
+    "main.js": "./static/js/main.7fdebd94.chunk.js",
+    "main.js.map": "./static/js/main.7fdebd94.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.fa365cae.js",
+    "runtime-main.js.map": "./static/js/runtime-main.fa365cae.js.map",
+    "static/js/2.2cd66a29.chunk.js": "./static/js/2.2cd66a29.chunk.js",
+    "static/js/2.2cd66a29.chunk.js.map": "./static/js/2.2cd66a29.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.51dab0bdb535ad2aeaf0f35e697fbbb4.js": "./precache-manifest.51dab0bdb535ad2aeaf0f35e697fbbb4.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.b7a9909f.chunk.css.map": "./static/css/main.b7a9909f.chunk.css.map",
+    "static/js/2.2cd66a29.chunk.js.LICENSE.txt": "./static/js/2.2cd66a29.chunk.js.LICENSE.txt",
+    "static/media/characterDetails.scss": "./static/media/background-card1.528a200d.jpg",
+    "static/media/character.scss": "./static/media/background-photo.7d88ecce.png",
+    "static/media/dead.png": "./static/media/dead.5b001790.png",
+    "static/media/index.scss": "./static/media/shlop-rg.91db29e9.ttf",
+    "static/media/title-cards.png": "./static/media/title-cards.61facc96.png",
+    "static/media/title-home.png": "./static/media/title-home.d88b4ae4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa365cae.js",
+    "static/js/2.2cd66a29.chunk.js",
+    "static/css/main.b7a9909f.chunk.css",
+    "static/js/main.7fdebd94.chunk.js"
+  ]
+}

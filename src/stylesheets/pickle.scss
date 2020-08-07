@@ -1,0 +1,31 @@
+.content__gif__cucum {
+  cursor: pointer;
+  width: 150px;
+  align-self: center;
+  margin-left: 10px;
+
+  & img {
+    width: 100%;
+  }
+
+  @media all and (max-width: 766px){
+    display: none;
+  }
+}
+
+.contain__quote {
+  width: 150px;
+  background: rgb(208, 255, 0);
+  border-radius: 10px;
+  border: 1px border green;
+  box-shadow: 0px 0px 10px 6px rgba(177, 196, 71, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__quote {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+  }
+}
