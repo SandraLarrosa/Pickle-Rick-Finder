@@ -8,6 +8,7 @@ import CharactersDetails from './CharactersDetails';
 import getDataCharacterApi from '../data/getDataCharacterApi';
 import TitleMain from './TitleMain';
 import Filters from './Filters';
+import ChangePage from './ChangePage';
 
 function App() {
   const [data, setData] = useState([]);
@@ -41,13 +42,25 @@ function App() {
     return <CharactersDetails data={foundCharacter} />;
   };
 
+  const handleChangePage = (ev) => {
+    const buttonPage = ev.currentTarget.id;
+    console.log(buttonPage);
+    console.log(page);
+    if (buttonPage === 'prev') {
+      console.log('Estoy dando a prev', page);
+    } else {
+      console.log('Estoy dando a next', page);
+    }
+  };
+
   return (
     <>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/Characters'>
+        <Route exact path='/characters'>
           <TitleMain />
           <Filters inputSearch={handleSearch} value={filterName} />
+          <ChangePage changePage={handleChangePage} pageNumber={page} />
           <CharactersList data={filterCharacters} />
         </Route>
         <Route path='/character/:id' render={renderCharacterDetail} />
