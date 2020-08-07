@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/filters.scss'
+import '../stylesheets/filters.scss';
 
 const Filters = (props) => {
   const handleSearch = (ev) => {
@@ -14,7 +14,7 @@ const Filters = (props) => {
   };
   return (
     <>
-      <div className="form__search">
+      <div className='form__search'>
         <form onSubmit={evPrevent}>
           <label htmlFor='search'>
             <input
@@ -27,6 +27,17 @@ const Filters = (props) => {
               onChange={handleSearch}
             ></input>
           </label>
+            <label className='label__check' htmlFor='order'>
+              <input
+                className='checkOrder'
+                type='checkbox'
+                id='order'
+                name='order'
+                value={props.value}
+                onChange={handleSearch}
+              ></input>
+              Order A-Z
+            </label>
         </form>
       </div>
     </>
