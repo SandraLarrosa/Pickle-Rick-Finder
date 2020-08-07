@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import '../stylesheets/characterDetails.scss';
 import '../stylesheets/backgroundSpace.scss';
 import deadIcon from '../images/icons8-headstone-64.png';
+import iconNext from '../images/icons8-next-page-200.png';
 
 const CharactersDetails = (props) => {
+  console.log(props.data.id);
   const dead = props.data.status === 'Dead' ? deadIcon : '';
 
   return (
@@ -15,6 +17,13 @@ const CharactersDetails = (props) => {
       <div className='clouds--Home'></div>
       <TitleMain />
       <main className='main__characterContain'>
+        <Link to={`/characters/${props.data.id - 1}`}>
+          <img
+            className='icon__prev'
+            src={`${iconNext}`}
+            alt='icon__prev'
+          ></img>
+        </Link>
         <article className='characterContain'>
           <div className='characterContain__img'>
             <img src={props.data.image} alt={props.data.name}></img>
@@ -47,6 +56,13 @@ const CharactersDetails = (props) => {
             </div>
           </div>
         </article>
+        <Link to={`/characters/${props.data.id + 1}`}>
+          <img
+            className='icon__next'
+            src={`${iconNext}`}
+            alt='icon__next'
+          ></img>
+        </Link>
       </main>
     </>
   );

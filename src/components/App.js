@@ -37,7 +37,13 @@ function App() {
   //Función que Pintar el personaje individual.
   const renderCharacterDetail = (props) => {
     const characterId = props.match.params.id;
-
+    const nextPage = Math.floor(characterId / 20);
+    console.log(nextPage);
+    if (characterId % 20 === 0) {
+      setPage(nextPage)
+    } else {
+      setPage(nextPage+1)
+    }
     const foundCharacter = data.find((character) => {
       return character.id === parseInt(characterId);
     });
