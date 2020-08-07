@@ -22,7 +22,7 @@ const CharactersDetails = (props) => {
           <div className='characterContain__text'>
             <span className='text--title'>
               <h3>{props.data.name}</h3>
-              <Link to='/Characters'>
+              <Link to='/characters'>
                 <i className='far fa-times-circle'></i>
               </Link>
             </span>

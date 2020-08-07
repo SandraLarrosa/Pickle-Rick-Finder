@@ -9,6 +9,7 @@ import getDataCharacterApi from '../data/getDataCharacterApi';
 import TitleMain from './TitleMain';
 import Filters from './Filters';
 import ChangePage from './ChangePage';
+import CharacterNotFound from './CharacterNotFound';
 
 function App() {
   const [data, setData] = useState([]);
@@ -36,10 +37,15 @@ function App() {
   //Función que Pintar el personaje individual.
   const renderCharacterDetail = (props) => {
     const characterId = props.match.params.id;
+
     const foundCharacter = data.find((character) => {
       return character.id === parseInt(characterId);
     });
-    return <CharactersDetails data={foundCharacter} />;
+    if (foundCharacter) {
+      return <CharactersDetails data={foundCharacter} />;
+    } else {
+      return <CharacterNotFound />;
+    }
   };
 
   const handleChangePage = (button) => {
@@ -61,7 +67,7 @@ function App() {
           <CharactersList data={filterCharacters} />
           <ChangePage changePage={handleChangePage} />
         </Route>
-        <Route path='/character/:id' render={renderCharacterDetail} />
+        <Route path='/characters/:id' render={renderCharacterDetail} />
       </Switch>
     </>
   );

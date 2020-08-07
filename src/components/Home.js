@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <Pickle />
       </header>
-      <Link to='/Characters'>
+      <Link to='/characters'>
         <div className='button__intro'>Comenzar</div>
       </Link>
     </>

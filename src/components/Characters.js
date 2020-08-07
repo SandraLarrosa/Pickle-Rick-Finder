@@ -7,7 +7,7 @@ const Characters = (props) => {
   const dead = props.status === 'Dead' ? iconDead : '';
   return (
     <>
-      <Link to={`/character/${props.id}`}>
+      <Link to={`/characters/${props.id}`}>
         <article id={props.id} className='card__character'>
           <div className='card__contentImg'>
             <div className='card__contentImg__img'>

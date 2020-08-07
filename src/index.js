@@ -10,7 +10,7 @@ import UnderConstruction from './components/UnderConstruction';
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <UnderConstruction />
+      <App />
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
