@@ -3,8 +3,11 @@ import TitleMain from './TitleMain';
 import { Link } from 'react-router-dom';
 import '../stylesheets/characterDetails.scss';
 import '../stylesheets/backgroundSpace.scss';
+import deadIcon from '../images/icons8-headstone-64.png';
 
 const CharactersDetails = (props) => {
+  const dead = props.data.status === 'Dead' ? deadIcon : '';
+
   return (
     <>
       <div className='stars--Home'></div>
@@ -36,9 +39,12 @@ const CharactersDetails = (props) => {
               <p>{props.data.status}</p>
             </span>
             <span className='text--episodes'>
-              <h4>Number Episodes:</h4>
+              <h4>Episodes:</h4>
               <p>{props.data.episode.length}24</p>
             </span>
+            <div className='containIcons'>
+              <img className='icon' src={`${dead}`} alt=''></img>
+            </div>
           </div>
         </article>
       </main>

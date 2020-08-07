@@ -13,7 +13,7 @@ import ChangePage from './ChangePage';
 function App() {
   const [data, setData] = useState([]);
   const [filterName, setFilterName] = useState('');
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(5);
 
   useEffect(() => {
     getDataCharacterApi(page).then((data) => {

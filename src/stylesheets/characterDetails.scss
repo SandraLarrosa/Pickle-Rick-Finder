@@ -57,16 +57,29 @@
 .text--specie {
   display: flex;
   padding-top: 10px;
+
+  & p{
+    color: white;
+    padding-left: 5px;
+  }
 }
 
 .text--origin {
   display: flex;
   padding-top: 10px;
+  & p{
+    color: white;
+    padding-left: 5px;
+  }
 }
 
 .text--status {
   display: flex;
   padding-top: 10px;
+  & p{
+    color: white;
+    padding-left: 5px;
+  }
 }
 
 .text--episodes {
@@ -74,4 +87,18 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid greenyellow;
+  & p{
+    color: white;
+    padding-left: 5px;
+  }
+}
+
+
+.containIcons{
+  display: flex;
+  justify-content: center;
+
+  & .icon{
+    width: 30px;
+  }
 }
