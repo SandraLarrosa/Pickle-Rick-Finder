@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Home from './Home/Home';
 import getDataCharacterApi from '../data/getDataCharacterApi';
 import TitleMain from './TitleMain';
-import Filters from './Filters';
+import Filters from './Filters/Filters';
 import ChangePage from './ChangePage';
 import CharactersList from './Characters/CharactersList';
 import CharactersDetails from './Characters/CharactersDetails';
