@@ -1,7 +1,8 @@
 import React from 'react';
-import '../stylesheets/backgroundSpace.scss';
-import '../stylesheets/underConstruction.scss';
 import Pickle from './Pickle';
+import '../../stylesheets/backgroundSpace.scss';
+import '../../stylesheets/underConstruction.scss';
+
 
 const UnderConstruction = () => {
   return (

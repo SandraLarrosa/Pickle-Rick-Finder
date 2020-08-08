@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import '../stylesheets/App.scss';
-import '../stylesheets/backgroundSpace.scss';
 import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
-import Home from './Home';
-import CharactersList from './CharactersList';
-import CharactersDetails from './CharactersDetails';
+
+import Home from './Home/Home';
 import getDataCharacterApi from '../data/getDataCharacterApi';
 import TitleMain from './TitleMain';
 import Filters from './Filters';
 import ChangePage from './ChangePage';
+import CharactersList from './CharactersList';
+import CharactersDetails from './CharactersDetails';
 import CharacterNotFound from './CharacterNotFound';
+
+import '../stylesheets/App.scss';
+import '../stylesheets/backgroundSpace.scss';
+
 
 function App() {
   const [data, setData] = useState([]);
