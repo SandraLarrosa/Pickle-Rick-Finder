@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getQuoteApi from '../../data/getQuoteApi';
-import '../../stylesheets/pickle.scss';
+import '../../stylesheets/Home/pickle.scss';
 
 const Pickle = () => {
   const [dataQuote, setQuote] = useState([
