@@ -24,8 +24,9 @@
     padding: 5px;
     background: transparent;
     backdrop-filter: blur(10px);
-    border: 2px solid yellowgreen;
+    border: 2px solid rgb(215, 226, 192);
     color: yellowgreen;
+    box-shadow: 0px 0px 10px 2px rgb(186, 253, 0);
 
     &::placeholder{
         color: white;
@@ -34,7 +35,8 @@
     }
 
     &:focus {
-        box-shadow: 0px 0px 10px 2px rgb(186, 253, 0);
+        background-color: rgba(153, 205, 50, 0.521);
+        color: white;
     }
 }
 

@@ -18,7 +18,7 @@ const Characters = (props) => {
           <div className='card__contentData'>
             <h3 className='card__contentData__name'>{props.name}</h3>
             <span className='card__contentData__specie'>
-              <h4 className='card__contentData__specie--title'>Specie:</h4>
+              <h4 className='card__contentData__specie--title'>Specie:</h4> 
               <p className='card__contentData__specie--specie'>
                 {props.specie}
               </p>

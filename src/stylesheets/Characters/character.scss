@@ -15,15 +15,15 @@
   transition-duration: 0.3s;
   transition-property: background-color;
 
-  &:hover{
+  &:hover {
     animation-name: hvr-bob-float, hvr-bob;
-    animation-duration: .3s, 1.5s;
-    animation-delay: 0s, .3s;
+    animation-duration: 0.3s, 1.5s;
+    animation-delay: 0s, 0.3s;
     animation-timing-function: ease-out, ease-in-out;
     animation-iteration-count: 1, infinite;
     animation-fill-mode: forwards;
     animation-direction: normal, alternate;
-    background-color: rgba(82, 112, 22, 0.849);
+    background-color: rgb(37, 65, 0);
   }
 }
 
@@ -55,60 +55,58 @@
   align-items: center;
   padding-top: 5px;
 
-  &__name{
-      font-size: 20px;
-      height: 70px;
-      text-align: center;
-      padding-top: 5px;
-      color: yellowgreen;
+  &__name {
+    font-size: 20px;
+    height: 70px;
+    text-align: center;
+    padding-top: 5px;
+    color: yellowgreen;
+
   }
 
-  &__specie{
-      display: flex;
-      margin-bottom: 10px;
-      margin-top: 10px;
+  &__specie {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
-      &--title {
-          font-weight: bold;
-          color: rgb(88, 180, 3);
-          padding-right: 5px;
-      }
+    &--title {
+      font-weight: bold;
+      color: rgb(88, 180, 3);
+      padding-right: 5px;
+    }
 
-      &--specie {
-          color: rgb(214, 238, 127);
-      }
+    &--specie {
+      color: rgb(214, 238, 127);
+    }
   }
 
-  &__status{
-      align-self: center;
+  &__status {
+    align-self: center;
 
-      & img{
-          width: 30px;
-      }
+    & img {
+      width: 30px;
+    }
   }
 }
-
 
 /* ANIMACIONES */
 
 @keyframes hvr-bob {
-    0% {
-      transform: translateY(-8px);
-    }
-    50% {
-      transform: translateY(-4px);
-    }
-    100% {
-      transform: translateY(-8px);
-    }
+  0% {
+    transform: translateY(-8px);
   }
-
-  @keyframes hvr-bob-float {
-    100% {
-      transform: translateY(-8px);
-    }
+  50% {
+    transform: translateY(-4px);
   }
+  100% {
+    transform: translateY(-8px);
+  }
+}
 
+@keyframes hvr-bob-float {
+  100% {
+    transform: translateY(-8px);
+  }
+}
 
-  /* Hack to improve aliasing on mobile/tablet devices */
-
+/* Hack to improve aliasing on mobile/tablet devices */
