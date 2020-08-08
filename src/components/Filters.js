@@ -9,9 +9,13 @@ const Filters = (props) => {
     });
   };
 
+  const handleOrder = () => {
+    props.orderCheck();
+  };
   const evPrevent = (ev) => {
     ev.preventDefault();
   };
+
   return (
     <>
       <div className='form__search'>
@@ -27,17 +31,18 @@ const Filters = (props) => {
               onChange={handleSearch}
             ></input>
           </label>
-            <label className='label__check' htmlFor='order'>
-              <input
-                className='checkOrder'
-                type='checkbox'
-                id='order'
-                name='order'
-                value={props.value}
-                onChange={handleSearch}
-              ></input>
-              Order A-Z
-            </label>
+          <label className='label__check' htmlFor='order'>
+            <input
+              className='checkOrder'
+              type='checkbox'
+              id='order'
+              name='order'
+              value='order'
+              onChange={handleOrder}
+              checked={props.orderCharacters}
+            ></input>
+            Order A-Z
+          </label>
         </form>
       </div>
     </>
