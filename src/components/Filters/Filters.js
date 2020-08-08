@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../stylesheets/filters.scss';
+import '../../stylesheets/Filters/filters.scss';
 
 const Filters = (props) => {
   const handleSearch = (ev) => {
