@@ -10,7 +10,7 @@ import CharactersList from './Characters/CharactersList';
 import CharactersDetails from './Characters/CharactersDetails';
 import CharacterNotFound from './Characters/CharacterNotFound';
 
-import '../stylesheets/App.scss';
+
 import '../stylesheets/backgroundSpace.scss';
 
 
