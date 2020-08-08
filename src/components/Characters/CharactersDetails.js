@@ -1,10 +1,11 @@
 import React from 'react';
-import TitleMain from './TitleMain';
 import { Link } from 'react-router-dom';
-import '../stylesheets/characterDetails.scss';
-import '../stylesheets/backgroundSpace.scss';
-import deadIcon from '../images/icons8-headstone-64.png';
-import iconNext from '../images/icons8-next-page-200.png';
+import TitleMain from '../TitleMain';
+import deadIcon from '../../images/icons8-headstone-64.png';
+import iconNext from '../../images/icons8-next-page-200.png';
+
+import '../../stylesheets/characterDetails.scss';
+import '../../stylesheets/backgroundSpace.scss';
 
 const CharactersDetails = (props) => {
   console.log(props.data.id);

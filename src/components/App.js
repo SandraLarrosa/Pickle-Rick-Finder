@@ -6,9 +6,9 @@ import getDataCharacterApi from '../data/getDataCharacterApi';
 import TitleMain from './TitleMain';
 import Filters from './Filters';
 import ChangePage from './ChangePage';
-import CharactersList from './CharactersList';
-import CharactersDetails from './CharactersDetails';
-import CharacterNotFound from './CharacterNotFound';
+import CharactersList from './Characters/CharactersList';
+import CharactersDetails from './Characters/CharactersDetails';
+import CharacterNotFound from './Characters/CharacterNotFound';
 
 import '../stylesheets/App.scss';
 import '../stylesheets/backgroundSpace.scss';

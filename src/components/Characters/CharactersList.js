@@ -1,7 +1,8 @@
 import React from 'react';
 import Characters from './Characters';
-import '../stylesheets/listCharacters.scss';
 import CharacterNotFound from './CharacterNotFound';
+import '../../stylesheets/listCharacters.scss';
+
 
 const CharactersList = (props) => {
   if (props.data.length === 0) {
