@@ -4,7 +4,7 @@ import TitleMain from '../TitleMain';
 import deadIcon from '../../images/icons8-headstone-64.png';
 import iconNext from '../../images/icons8-next-page-200.png';
 
-import '../../stylesheets/characterDetails.scss';
+import '../../stylesheets/Characters/characterDetails.scss';
 import '../../stylesheets/backgroundSpace.scss';
 
 const CharactersDetails = (props) => {

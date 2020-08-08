@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../stylesheets/characterNotFound.scss';
+import '../../stylesheets/Characters/characterNotFound.scss';
 
 const CharacterNotFound = () => {
   return (

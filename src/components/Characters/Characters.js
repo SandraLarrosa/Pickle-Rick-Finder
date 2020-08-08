@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import iconDead from '../../images/icons8-headstone-64.png';
-import '../../stylesheets/character.scss';
+import '../../stylesheets/Characters/character.scss';
 
 const Characters = (props) => {
   const dead = props.status === 'Dead' ? iconDead : '';
