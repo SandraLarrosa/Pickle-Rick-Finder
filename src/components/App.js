@@ -10,10 +10,10 @@ import CharactersList from './Characters/CharactersList';
 import CharactersDetails from './Characters/CharactersDetails';
 import CharacterNotFound from './Characters/CharacterNotFound';
 
-
 function App() {
   const [data, setData] = useState([]);
   const [filterName, setFilterName] = useState('');
+  const [filterStatus, setFilterStatus] = useState('All');
   const [orderCharacters, setOrderCharacters] = useState(false);
   const [page, setPage] = useState(1);
 
@@ -23,10 +23,14 @@ function App() {
     });
   }, [page]);
 
-  //Función manejadora de evento del input que actualiza el estado del filtro.
-  const handleSearch = (data) => {
+  //Función manejadora de evento del input y del select que actualiza el estado del filtro.
+  const handleFilters = (data) => {
     if (data.key === 'name') {
+      console.log('Estoy click en input');
       setFilterName(data.value);
+    } else if (data.key === 'status') {
+      console.log('Estoy en select');
+      setFilterStatus(data.value);
     }
   };
 
@@ -54,9 +58,14 @@ function App() {
   };
 
   //Filtrado de personajes por nombre del input value. Los pintamos en el componente characterList
-  const filterCharacters = data.filter((character) => {
-    return character.name.toUpperCase().includes(filterName.toUpperCase());
-  });
+  const filterCharacters = data
+    .filter((character) => {
+      return character.name.toUpperCase().includes(filterName.toUpperCase());
+    })
+    .filter((character) => {
+      console.log(character);
+      return filterStatus === 'All' ? true : character.status.toUpperCase() === filterStatus.toUpperCase();
+    });
 
   //Función que Pinta el personaje individual y hace que vuelva a llamar a la Api cuando estamos navegando en los personajes individuales
   const renderCharacterDetail = (props) => {
@@ -93,7 +102,7 @@ function App() {
         <Route exact path='/characters'>
           <TitleMain />
           <Filters
-            inputSearch={handleSearch}
+            handleFilters={handleFilters}
             value={filterName}
             orderCheck={handleOrder}
             orderCharacters={orderCharacters}

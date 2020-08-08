@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const FilterName = (props) => {
   const handleSearch = (ev) => {
-    props.inputSearch({
+    props.filters({
       value: ev.currentTarget.value,
       key: 'name',
     });
