@@ -20,7 +20,7 @@ const Pickle = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  }, [dataQuote]);
 
   return (
     <>

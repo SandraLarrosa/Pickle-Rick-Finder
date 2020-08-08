@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import iconDead from '../../images/icons8-headstone-64.png';
 import '../../stylesheets/Characters/character.scss';
 
@@ -31,5 +32,12 @@ const Characters = (props) => {
     </>
   );
 };
+
+Characters.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  specie: PropTypes.string,
+  img: PropTypes.string
+}
 
 export default Characters;

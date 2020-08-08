@@ -11,9 +11,6 @@ import CharactersDetails from './Characters/CharactersDetails';
 import CharacterNotFound from './Characters/CharacterNotFound';
 
 
-import '../stylesheets/backgroundSpace.scss';
-
-
 function App() {
   const [data, setData] = useState([]);
   const [filterName, setFilterName] = useState('');

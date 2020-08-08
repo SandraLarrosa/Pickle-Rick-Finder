@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Characters from './Characters';
 import CharacterNotFound from './CharacterNotFound';
 import '../../stylesheets/Characters/listCharacters.scss';
+
 
 
 const CharactersList = (props) => {
@@ -32,5 +34,9 @@ const CharactersList = (props) => {
     </>
   );
 };
+
+CharactersList.propTypes = {
+  data: PropTypes.array,
+}
 
 export default CharactersList;

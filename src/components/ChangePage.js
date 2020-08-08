@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import IconNextPage from '../images/icons8-next-page-200.png';
 import '../stylesheets/changePage.scss';
 
@@ -8,6 +9,7 @@ const ChangePage = (props) => {
     const buttonPage = ev.currentTarget.id;
     props.changePage(buttonPage);
   };
+
   return (
     <>
       <div className='contain__selectPage'>
@@ -33,6 +35,11 @@ const ChangePage = (props) => {
       </div>
     </>
   );
+};
+
+ChangePage.propTypes = {
+  changePage: PropTypes.func,
+  dataPage: PropTypes.number,
 };
 
 export default ChangePage;

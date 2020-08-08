@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TitleMain from '../TitleMain';
+import PropTypes from 'prop-types';
 import deadIcon from '../../images/icons8-headstone-64.png';
 import iconNext from '../../images/icons8-next-page-200.png';
 
@@ -8,7 +9,6 @@ import '../../stylesheets/Characters/characterDetails.scss';
 import '../../stylesheets/backgroundSpace.scss';
 
 const CharactersDetails = (props) => {
-  console.log(props.data.id);
   const dead = props.data.status === 'Dead' ? deadIcon : '';
 
   return (
@@ -68,5 +68,14 @@ const CharactersDetails = (props) => {
     </>
   );
 };
+
+CharactersDetails.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  species: PropTypes.string,
+  image: PropTypes.string,
+  origin: PropTypes.object,
+  episode: PropTypes.array,
+}
 
 export default CharactersDetails;

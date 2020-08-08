@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FilterOrder = (props) => {
-
   const handleOrder = () => {
     props.orderCheck();
   };
@@ -23,5 +23,10 @@ const FilterOrder = (props) => {
     </>
   );
 };
+
+FilterOrder.propTypes = {
+  orderCharacters: PropTypes.bool,
+  orderCheck: PropTypes.func,
+}
 
 export default FilterOrder;

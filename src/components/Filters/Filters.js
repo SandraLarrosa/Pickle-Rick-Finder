@@ -1,7 +1,9 @@
 import React from 'react';
-import '../../stylesheets/Filters/filters.scss';
+import PropTypes from 'prop-types';
 import FilterName from './FilterName';
 import FilterOrder from './FilterOrder';
+import '../../stylesheets/Filters/filters.scss';
+
 
 const Filters = (props) => {
   const evPrevent = (ev) => {
@@ -20,6 +22,13 @@ const Filters = (props) => {
       </div>
     </>
   );
+};
+
+Filters.propTypes = {
+  value: PropTypes.string,
+  inputSearch: PropTypes.func,
+  orderCharacters: PropTypes.bool,
+  orderCheck: PropTypes.func,
 };
 
 export default Filters;
