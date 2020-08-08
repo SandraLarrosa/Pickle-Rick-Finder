@@ -49,7 +49,7 @@ const CharactersDetails = (props) => {
             </span>
             <span className='text--episodes'>
               <h4>Episodes:</h4>
-              <p>{props.data.episode.length}24</p>
+              <p>{props.data.episode.length}</p>
             </span>
             <div className='containIcons'>
               <img className='icon' src={`${dead}`} alt=''></img>
