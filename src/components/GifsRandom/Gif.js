@@ -2,17 +2,22 @@ import React, { useState, useEffect } from 'react';
 import TitleMain from '../TitleMain';
 import getGifsApi from '../../data/getGifsApi';
 import '../../stylesheets/backgroundSpace.scss';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Gif = (props) => {
-  const [gifs, setGifs] = useState(
-    'https://media.giphy.com/media/tJqyalvo9ahykfykAj/giphy.gif'
-  );
+  const [gifs, setGifs] = useState();
 
-  /*  useEffect(() => {
-      getGifsApi().then((gif) => {
-        setGif(gif.data.image_url);
-      });
-    }, []); */
+  useEffect(() => {
+    getGifsApi().then((gif) => {
+      setGifs(gif.data.image_url);
+    });
+  }, []);
+
+  const getNewGif = () => {
+    getGifsApi().then((gif) => {
+      setGifs(gif.data.image_url);
+    });
+  };
 
   return (
     <div>
@@ -21,8 +26,10 @@ const Gif = (props) => {
       <div className='clouds--Home'></div>
       <TitleMain />
       <section>
-        <div>Give Me One More</div>
-        <div>Go Back</div>
+        <div onClick={getNewGif}>Give Me One More</div>
+        <Link to='/characters'>
+          <div>Go Back</div>
+        </Link>
         <div>
           <img src={`${gifs}`} alt='Gif Rick and Morty'></img>
         </div>

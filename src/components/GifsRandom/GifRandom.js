@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../stylesheets/GifsRandom/gifsRandom.scss';
-import RickAndMorty from '../../images/rick_and_morty.png';
 
 
 const GifRandom = () => {
