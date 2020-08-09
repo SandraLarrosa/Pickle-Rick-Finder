@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import getGifsApi from '../../data/getGifsApi';
 import TitleMain from '../TitleMain';
 import '../../stylesheets/backgroundSpace.scss';
-import '../../stylesheets/GifsRandom/gifs.scss';
+import '../../stylesheets/GifsRandom/gifsRandom.scss';
 
-const Gif = () => {
+const GifsRandom = () => {
   const [gifs, setGifs] = useState();
 
   useEffect(() => {
@@ -41,4 +41,4 @@ const Gif = () => {
   );
 };
 
-export default Gif;
+export default GifsRandom;

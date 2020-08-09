@@ -31,7 +31,8 @@ const Pickle = () => {
         <div className='bubble'></div>
         <img
           src='https://media.giphy.com/media/5tmq8Z3eXXOpgE8Dou/giphy.gif'
-          alt='gif-cucum'
+          alt='Gif Pickle Rick'
+          title='Gif Pickle Rick'
         ></img>
       </div>
     </>

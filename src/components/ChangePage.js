@@ -6,7 +6,7 @@ import '../stylesheets/changePage.scss';
 
 const ChangePage = (props) => {
 
-  const changePageCharacter = (ev) => {
+  const changePage = (ev) => {
     const buttonPage = ev.currentTarget.id;
     props.changePage(buttonPage);
   };
@@ -19,7 +19,7 @@ const ChangePage = (props) => {
             id='prev'
             src={IconPrevPage}
             alt='Icon prev pag'
-            onClick={changePageCharacter}
+            onClick={changePage}
             title="Go Previous Page"
           ></img>
           <p>Previous Page</p>
@@ -30,7 +30,7 @@ const ChangePage = (props) => {
             id='next'
             src={IconNextPage}
             alt='Icon next pag'
-            onClick={changePageCharacter}
+            onClick={changePage}
             title="Go Next Page"
           ></img>
           <p>Next page</p>

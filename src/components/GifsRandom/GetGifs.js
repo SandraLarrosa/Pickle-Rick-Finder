@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../stylesheets/GifsRandom/gifsRandom.scss';
+import '../../stylesheets/GifsRandom/getGifs.scss';
 
 
-const GifRandom = () => {
+const GetGifs = () => {
   return (
     <>
       <Link to='/gifs'>
@@ -21,4 +21,4 @@ const GifRandom = () => {
   );
 };
 
-export default GifRandom;
+export default GetGifs;

@@ -9,14 +9,15 @@ import ChangePage from './ChangePage';
 import CharactersList from './Characters/CharactersList';
 import CharactersDetails from './Characters/CharactersDetails';
 import CharacterNotFound from './Characters/CharacterNotFound';
-import GifRandom from './GifsRandom/GifRandom';
-import Gif from './GifsRandom/Gif';
+import GetGifs from './GifsRandom/GetGifs';
+import GifsRandom from './GifsRandom/GifsRandom';
+
 
 function App() {
   const [data, setData] = useState([]); //Estado datos personajes iniciales
   const [filterName, setFilterName] = useState(''); //Estado del input de búsqueda de personaje
   const [filterStatus, setFilterStatus] = useState('All'); //Estado del select del estado del personaje
-  const [orderCharacters, setOrderCharacters] = useState(false); //Estado del checkbox para ordenar los personajes
+  const [checkOrderCharacters, setCheckOrderCharacters] = useState(false); //Estado del checkbox para ordenar los personajes
   const [page, setPage] = useState(1); //Estado de la página inicial
 
   //Llamada a la Api
@@ -47,13 +48,13 @@ function App() {
   
   //Función que ordena en orden alfabético los personajes
   const handleOrder = () => {
-    if (orderCharacters !== true) {
-      setOrderCharacters(true);
+    if (checkOrderCharacters !== true) {
+      setCheckOrderCharacters(true);
       data.sort((a, b) =>
         a.name.toUpperCase().localeCompare(b.name.toUpperCase())
       );
     } else {
-      setOrderCharacters(false);
+      setCheckOrderCharacters(false);
       data.sort((a, b) => {
         if (a.id > b.id) {
           return 1;
@@ -99,19 +100,19 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/characters'>
           <TitleMain />
-          <GifRandom />
+          <GetGifs />
           <Filters
             handleFilters={handleFilters}
             value={filterName}
             handleOrder={handleOrder}
-            orderCharacters={orderCharacters}
+            orderCharacters={checkOrderCharacters}
           />
           <ChangePage changePage={handleChangePage} dataPage={page} />
           <CharactersList data={filterCharacters} />
           <ChangePage changePage={handleChangePage} dataPage={page} />
         </Route>
         <Route path='/characters/:id' render={renderCharacterDetail} />
-        <Route path='/gifs' component={Gif}/>
+        <Route path='/gifs' component={GifsRandom}/>
       </Switch>
     </>
   );
