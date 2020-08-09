@@ -4,9 +4,6 @@ import '../../stylesheets/GifsRandom/gifsRandom.scss';
 
 
 const GifRandom = () => {
-    
-
-
   return (
     <>
       <Link to='/gifs'>

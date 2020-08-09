@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import TitleMain from '../TitleMain';
-import getGifsApi from '../../data/getGifsApi';
-import '../../stylesheets/backgroundSpace.scss';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import getGifsApi from '../../data/getGifsApi';
+import TitleMain from '../TitleMain';
+import '../../stylesheets/backgroundSpace.scss';
+import '../../stylesheets/GifsRandom/gifs.scss';
 
-const Gif = (props) => {
+const Gif = () => {
   const [gifs, setGifs] = useState();
 
   useEffect(() => {
@@ -25,14 +26,16 @@ const Gif = (props) => {
       <div className='twinkling--Home'></div>
       <div className='clouds--Home'></div>
       <TitleMain />
-      <section>
-        <div onClick={getNewGif}>Give Me One More</div>
-        <Link to='/characters'>
-          <div>Go Back</div>
-        </Link>
-        <div>
+      <section className='contain__gifsRandom'>
+        <div className='button__giveMeMore' onClick={getNewGif}>
+          Give Me One More
+        </div>
+        <div className='contain__gif'>
           <img src={`${gifs}`} alt='Gif Rick and Morty'></img>
         </div>
+        <Link to='/characters'>
+          <div className='button__goBack'>Go Back</div>
+        </Link>
       </section>
     </div>
   );
