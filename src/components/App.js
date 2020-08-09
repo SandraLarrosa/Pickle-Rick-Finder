@@ -10,6 +10,7 @@ import CharactersList from './Characters/CharactersList';
 import CharactersDetails from './Characters/CharactersDetails';
 import CharacterNotFound from './Characters/CharacterNotFound';
 import GifRandom from './GifsRandom/GifRandom';
+import Gif from './GifsRandom/Gif';
 
 function App() {
   const [data, setData] = useState([]);
@@ -64,7 +65,6 @@ function App() {
       return character.name.toUpperCase().includes(filterName.toUpperCase());
     })
     .filter((character) => {
-      console.log(character);
       return filterStatus === 'All' ? true : character.status.toUpperCase() === filterStatus.toUpperCase();
     });
 
@@ -114,6 +114,7 @@ function App() {
           <ChangePage changePage={handleChangePage} dataPage={page} />
         </Route>
         <Route path='/characters/:id' render={renderCharacterDetail} />
+        <Route path='/gifs' component={Gif}/>
       </Switch>
     </>
   );

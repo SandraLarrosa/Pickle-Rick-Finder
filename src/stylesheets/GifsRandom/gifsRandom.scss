@@ -3,7 +3,8 @@
   flex-direction: column;
   position: absolute;
   top: 0;
-  margin-left: 30px;
+  margin-left: 80px;
+  margin-top: 50px;
 
   &__text {
     width: 200px;
@@ -36,21 +37,12 @@
 .contain__rickAndMorty {
   cursor: pointer;
   position: relative;
+  margin-top: 30px;
   width: 200px;
-
-  @media all and (min-width: 1200px) {
-    width: 300px;
-  }
 
   & img {
     width: 100%;
     position: relative;
-    &:hover {
-      animation-name: hvr-pulse;
-      animation-duration: 1s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
   }
 }
 
@@ -75,11 +67,3 @@
   }
 }
 
-@keyframes hvr-pulse {
-  25% {
-    transform: scale(1.1);
-  }
-  75% {
-    transform: scale(0.9);
-  }
-}
