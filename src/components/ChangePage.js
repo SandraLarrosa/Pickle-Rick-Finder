@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconNextPage from '../images/icons8-next-page-200.png';
+import IconPrevPage from '../images/icons8-prev-page-200.png';
 import '../stylesheets/changePage.scss';
 
 const ChangePage = (props) => {
@@ -16,7 +17,7 @@ const ChangePage = (props) => {
         <div className='prev__page'>
           <img
             id='prev'
-            src={IconNextPage}
+            src={IconPrevPage}
             alt='Icon prev pag'
             onClick={changePageCharacter}
           ></img>

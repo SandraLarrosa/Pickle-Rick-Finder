@@ -56,16 +56,19 @@
   padding-top: 5px;
 
   &__name {
-    font-size: 20px;
+    font-size: 24px;
     height: 70px;
     text-align: center;
-    padding-top: 5px;
-    color: yellowgreen;
-
+    padding-top: 10px;
+    color: rgb(228, 241, 167);
+    font-family: 'Shlop';
+    word-wrap: break-word;
   }
 
   &__specie {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 10px;
     margin-top: 10px;
 

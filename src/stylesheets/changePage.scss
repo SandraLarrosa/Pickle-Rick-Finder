@@ -1,51 +1,75 @@
-.contain__selectPage{
-    max-width: 1200px;
-    margin: auto;
+.contain__selectPage {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  & .prev__page {
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
 
-    & .prev__page {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
+    & img {
+      cursor: pointer;
+      width: 50px;
 
-        & img{
-            cursor: pointer;
-            transform: rotate(180deg);
-            width: 50px;
-        }
-
-        & p{
-            width: 80px;
-            font-size: 10px;
-            color: yellowgreen;
-            text-transform: uppercase;
-        }
+      &:hover {
+        animation-name: hvr-pulse;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
     }
 
-    & .next__page {
-        display: flex;
-        align-items: center;
-        
-        & img{
-            cursor: pointer;
-            width: 50px;
-        }
+    & p {
+      width: 90px;
+      padding-right: 5px;
+      font-size: 10px;
+      color: yellowgreen;
+      text-transform: uppercase;
+    }
+  }
 
-        & p{
-            width: 80px;
-            font-size: 10px;
-            color: yellowgreen;
-            text-transform: uppercase;
-        }
+  & .next__page {
+    display: flex;
+    align-items: center;
+
+    & img {
+      cursor: pointer;
+      width: 50px;
+
+      &:hover {
+        animation-name: hvr-pulse;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
     }
 
+    & p {
+      width: 90px;
+      padding-left: 5px;
+      font-size: 10px;
+      color: yellowgreen;
+      text-transform: uppercase;
+    }
+  }
 }
 
-.number__page{
-    width: 120px;
-    color: white;
-    font-size: 12px;
-    align-self: center;
-    padding: 10px;
+.number__page {
+  width: 120px;
+  color: white;
+  font-size: 12px;
+  align-self: center;
+  padding: 10px;
 }
+
+@keyframes hvr-pulse {
+  25% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+}
+

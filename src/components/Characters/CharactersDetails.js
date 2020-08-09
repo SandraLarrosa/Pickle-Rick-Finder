@@ -4,6 +4,7 @@ import TitleMain from '../TitleMain';
 import PropTypes from 'prop-types';
 import deadIcon from '../../images/icons8-headstone-64.png';
 import iconNext from '../../images/icons8-next-page-200.png';
+import IconPrevPage from '../../images/icons8-prev-page-200.png';
 
 import '../../stylesheets/Characters/characterDetails.scss';
 import '../../stylesheets/backgroundSpace.scss';
@@ -21,7 +22,7 @@ const CharactersDetails = (props) => {
         <Link to={`/characters/${props.data.id - 1}`}>
           <img
             className='icon__prev'
-            src={`${iconNext}`}
+            src={`${IconPrevPage}`}
             alt='icon__prev'
           ></img>
         </Link>

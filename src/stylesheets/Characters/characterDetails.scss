@@ -109,8 +109,14 @@
   cursor: pointer;
   width: 60px;
   height: 60px;
-  transform: rotate(180deg);
   margin-right: 30px;
+
+  &:hover {
+    animation-name: hvr-pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
 }
 
 .icon__next{
@@ -118,4 +124,20 @@
   width: 60px;
   height: 60px;
   margin-left: 30px;
+
+  &:hover {
+    animation-name: hvr-pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes hvr-pulse {
+  25% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
 }
