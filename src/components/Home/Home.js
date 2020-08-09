@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Pickle from './Pickle';
 
 import titleHome from '../../images/title-home.png';
+import GifNav from '../../images/gif--nav.gif'
 import '../../stylesheets/backgroundSpace.scss';
 import '../../stylesheets/Home/home.scss';
 
@@ -15,7 +16,7 @@ const Home = () => {
       <header className='content__title'>
         <div className='content__gif__nave'>
           <img
-            src='https://media.giphy.com/media/gJ2TzwqdRoKoZ0KWhW/giphy.gif'
+            src={GifNav}
             alt='gif-nave'
           ></img>
         </div>

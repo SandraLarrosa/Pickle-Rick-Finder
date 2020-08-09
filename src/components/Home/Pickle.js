@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import getQuoteApi from '../../data/getQuoteApi';
+import PickleRick from '../../images/gif-PickleRick.gif'
 import '../../stylesheets/Home/pickle.scss';
 
 const Pickle = () => {
@@ -30,7 +31,7 @@ const Pickle = () => {
         </div>
         <div className='bubble'></div>
         <img
-          src='https://media.giphy.com/media/5tmq8Z3eXXOpgE8Dou/giphy.gif'
+          src={PickleRick}
           alt='Gif Pickle Rick'
           title='Gif Pickle Rick'
         ></img>
