@@ -9,6 +9,7 @@ import ChangePage from './ChangePage';
 import CharactersList from './Characters/CharactersList';
 import CharactersDetails from './Characters/CharactersDetails';
 import CharacterNotFound from './Characters/CharacterNotFound';
+import GifRandom from './GifsRandom/GifRandom';
 
 function App() {
   const [data, setData] = useState([]);
@@ -101,6 +102,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/characters'>
           <TitleMain />
+          <GifRandom />
           <Filters
             handleFilters={handleFilters}
             value={filterName}
