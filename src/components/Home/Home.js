@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import titleHome from '../../images/title-home.png';
 import Pickle from './Pickle';
-import '../../stylesheets/Home/home.scss';
 import '../../stylesheets/backgroundSpace.scss';
-
+import '../../stylesheets/Home/home.scss';
 
 const Home = () => {
   return (
