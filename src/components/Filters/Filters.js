@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FilterName from './FilterName';
 import FilterOrder from './FilterOrder';
-import '../../stylesheets/Filters/filters.scss';
 import FilterStatus from './FilterStatus';
+import '../../stylesheets/Filters/filters.scss';
 
 const Filters = (props) => {
   const evPrevent = (ev) => {
@@ -13,12 +13,12 @@ const Filters = (props) => {
     <>
       <form className='form' onSubmit={evPrevent}>
         <div className='form__search'>
-          <FilterName filters={props.handleFilters} value={props.value} />
+          <FilterName handleFilters={props.handleFilters} value={props.value} />
         </div>
         <div className='form__order'>
-          <FilterStatus filters={props.handleFilters} />
+          <FilterStatus handleFilters={props.handleFilters} />
           <FilterOrder
-            orderCheck={props.orderCheck}
+            handleOrder={props.handleOrder}
             orderCharacters={props.orderCharacters}
           />
         </div>

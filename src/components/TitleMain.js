@@ -8,7 +8,7 @@ const TitleMain = (props) => {
     <header className='header__title'>
       <Link to='/'>
         <div className='img__title'>
-          <img src={TitleRickAndMorty} alt='Title Rick and Morty'></img>
+          <img src={TitleRickAndMorty} alt='Title Rick and Morty' title='Go Home'></img>
         </div>
       </Link>
     </header>

@@ -13,40 +13,46 @@ import GifRandom from './GifsRandom/GifRandom';
 import Gif from './GifsRandom/Gif';
 
 function App() {
-  const [data, setData] = useState([]);
-  const [filterName, setFilterName] = useState('');
-  const [filterStatus, setFilterStatus] = useState('All');
-  const [orderCharacters, setOrderCharacters] = useState(false);
-  const [page, setPage] = useState(1);
+  const [data, setData] = useState([]); //Estado datos personajes iniciales
+  const [filterName, setFilterName] = useState(''); //Estado del input de búsqueda de personaje
+  const [filterStatus, setFilterStatus] = useState('All'); //Estado del select del estado del personaje
+  const [orderCharacters, setOrderCharacters] = useState(false); //Estado del checkbox para ordenar los personajes
+  const [page, setPage] = useState(1); //Estado de la página inicial
 
+  //Llamada a la Api
   useEffect(() => {
     getDataCharacterApi(page).then((data) => {
       setData(data.results);
     });
   }, [page]);
 
-  //Función manejadora de evento del input y del select que actualiza el estado del filtro.
+  //Función manejadora de evento del input y del select que actualiza el estado del Input y del Select.
   const handleFilters = (data) => {
     if (data.key === 'name') {
-      console.log('Estoy click en input');
       setFilterName(data.value);
     } else if (data.key === 'status') {
-      console.log('Estoy en select');
       setFilterStatus(data.value);
     }
   };
 
+  //Filtrado de personajes por el valor del Input y de los caracteres.
+  const filterCharacters = data
+    .filter((character) => {
+      return character.name.toUpperCase().includes(filterName.toUpperCase());
+    })
+    .filter((character) => {
+      return filterStatus === 'All' ? true : character.status.toUpperCase() === filterStatus.toUpperCase();
+    });
+
+  
   //Función que ordena en orden alfabético los personajes
   const handleOrder = () => {
     if (orderCharacters !== true) {
-      console.log('Estoy en ordenar');
-      console.log(data[0]);
       setOrderCharacters(true);
       data.sort((a, b) =>
         a.name.toUpperCase().localeCompare(b.name.toUpperCase())
       );
     } else {
-      console.log('Estoy desordenado');
       setOrderCharacters(false);
       data.sort((a, b) => {
         if (a.id > b.id) {
@@ -58,15 +64,6 @@ function App() {
       });
     }
   };
-
-  //Filtrado de personajes por nombre del input value. Los pintamos en el componente characterList
-  const filterCharacters = data
-    .filter((character) => {
-      return character.name.toUpperCase().includes(filterName.toUpperCase());
-    })
-    .filter((character) => {
-      return filterStatus === 'All' ? true : character.status.toUpperCase() === filterStatus.toUpperCase();
-    });
 
   //Función que Pinta el personaje individual y hace que vuelva a llamar a la Api cuando estamos navegando en los personajes individuales
   const renderCharacterDetail = (props) => {
@@ -106,7 +103,7 @@ function App() {
           <Filters
             handleFilters={handleFilters}
             value={filterName}
-            orderCheck={handleOrder}
+            handleOrder={handleOrder}
             orderCharacters={orderCharacters}
           />
           <ChangePage changePage={handleChangePage} dataPage={page} />

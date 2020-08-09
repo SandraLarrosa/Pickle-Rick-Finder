@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const FilterOrder = (props) => {
   const handleOrder = () => {
-    props.orderCheck();
+    props.handleOrder();
   };
 
   return (

@@ -24,7 +24,7 @@ const Home = () => {
         <Pickle />
       </header>
       <Link to='/characters'>
-        <div className='button__intro'>Let's Go</div>
+        <div className='button__intro' title="Go Search Characters">Let's Go</div>
       </Link>
     </>
   );

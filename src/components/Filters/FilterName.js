@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 const FilterName = (props) => {
   const handleSearch = (ev) => {
-    props.filters({
+    props.handleFilters({
       value: ev.currentTarget.value,
       key: 'name',
     });
   };
+  
   return (
     <>
       <label htmlFor='search'>

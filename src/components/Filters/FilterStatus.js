@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import '../../stylesheets/Filters/filterStatus.scss';
 
 const FilterStatus = (props) => {
-  const handleFilters = (ev) => {
-    props.filters({
+  const handleSearch = (ev) => {
+    props.handleFilters({
       value: ev.currentTarget.value,
       key: 'status',
     });
@@ -17,7 +17,7 @@ const FilterStatus = (props) => {
           className='containStatus__select'
           name='status'
           id='status'
-          onChange={handleFilters}
+          onChange={handleSearch}
         >
           <option value='All'>All</option>
           <option value='Alive'>Alive</option>

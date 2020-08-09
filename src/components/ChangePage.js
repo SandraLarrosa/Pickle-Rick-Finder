@@ -20,6 +20,7 @@ const ChangePage = (props) => {
             src={IconPrevPage}
             alt='Icon prev pag'
             onClick={changePageCharacter}
+            title="Go Previous Page"
           ></img>
           <p>Previous Page</p>
         </div>
@@ -30,6 +31,7 @@ const ChangePage = (props) => {
             src={IconNextPage}
             alt='Icon next pag'
             onClick={changePageCharacter}
+            title="Go Next Page"
           ></img>
           <p>Next page</p>
         </div>
