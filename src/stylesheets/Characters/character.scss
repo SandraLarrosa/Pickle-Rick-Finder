@@ -15,6 +15,11 @@
   transition-duration: 0.3s;
   transition-property: background-color;
 
+   @media all and(min-width: 1200px){
+    width: 200px;
+    height: 350px;
+   }
+
   &:hover {
     animation-name: hvr-bob-float, hvr-bob;
     animation-duration: 0.3s, 1.5s;
