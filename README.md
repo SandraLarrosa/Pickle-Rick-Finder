@@ -16,9 +16,13 @@ La evaluación consiste en desarrollar una página web con un listado de persona
 - Icono en cada tarjeta de personaje indicando si está muerto.
 
 <div display="flex" flex-direction="column">
-    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/principal.png" width="300" heigth="300">
-    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/individual.png" width="300" heigth="300">
-    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/filter.png" width="300" heigth="300">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/principal.png" width="500" heigth="500">
+</div>
+<div>
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/individual.png" width="500" heigth="500">
+</div>
+<div>
+<img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/filter.png" width="500" heigth="500">
 </div>
 
 
@@ -31,12 +35,14 @@ La evaluación consiste en desarrollar una página web con un listado de persona
  
 
 <div display="flex" flex-direction="column">
-    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/pickleRick.png" alt="Imagen Pickle Rick"width="300" heigth="300">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/pickleRick.png" alt="Imagen Pickle Rick"width="100" heigth="100">
+</div>
+<div>
     <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/paginacion.png" width="300" heigth="300">
 </div>
 <div display="flex">
-    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/addgif.png"  width="300" heigth="300">
-    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/gifspage.png" width="300" heigth="300">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/addgif.png"  width="100" heigth="100">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/gifspage.png" width="400" heigth="400">
 </div>
 
   #### Tecnologías utilizadas 💻
