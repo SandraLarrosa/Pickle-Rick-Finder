@@ -15,7 +15,7 @@ import Loading from './Loading';
 
 function App() {
   const [data, setData] = useState([]); //Estado datos personajes iniciales
-  const [filterName, setFilterName] = useState(''); //Estado del input de búsqueda de personaje
+  const [filterName, setFilterName] = useState(localStorage.getItem('filterName') || ''); //Estado del input de búsqueda de personaje
   const [filterStatus, setFilterStatus] = useState('All'); //Estado del select del estado del personaje
   const [checkOrderCharacters, setCheckOrderCharacters] = useState(false); //Estado del checkbox para ordenar los personajes
   const [page, setPage] = useState(1); //Estado de la página inicial
@@ -29,6 +29,11 @@ function App() {
       setLoading(false);
     });
   }, [page]);
+
+
+  useEffect(() => {
+    localStorage.setItem('filterName', filterName);
+  }, [filterName]);
 
   //Función manejadora de evento del input y del select que actualiza el estado del Input y del Select.
   const handleFilters = (data) => {
