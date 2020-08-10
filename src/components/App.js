@@ -11,7 +11,7 @@ import CharactersDetails from './Characters/CharactersDetails';
 import CharacterNotFound from './Characters/CharacterNotFound';
 import GetGifs from './GifsRandom/GetGifs';
 import GifsRandom from './GifsRandom/GifsRandom';
-
+import Loading from './Loading';
 
 function App() {
   const [data, setData] = useState([]); //Estado datos personajes iniciales
@@ -19,11 +19,14 @@ function App() {
   const [filterStatus, setFilterStatus] = useState('All'); //Estado del select del estado del personaje
   const [checkOrderCharacters, setCheckOrderCharacters] = useState(false); //Estado del checkbox para ordenar los personajes
   const [page, setPage] = useState(1); //Estado de la página inicial
+  const [loading, setLoading] = useState(false);
 
   //Llamada a la Api
   useEffect(() => {
+    setLoading(true);
     getDataCharacterApi(page).then((data) => {
       setData(data.results);
+      setLoading(false);
     });
   }, [page]);
 
@@ -42,10 +45,11 @@ function App() {
       return character.name.toUpperCase().includes(filterName.toUpperCase());
     })
     .filter((character) => {
-      return filterStatus === 'All' ? true : character.status.toUpperCase() === filterStatus.toUpperCase();
+      return filterStatus === 'All'
+        ? true
+        : character.status.toUpperCase() === filterStatus.toUpperCase();
     });
 
-  
   //Función que ordena en orden alfabético los personajes
   const handleOrder = () => {
     if (checkOrderCharacters !== true) {
@@ -94,6 +98,9 @@ function App() {
     }
   };
 
+  const printCharacters =
+    loading === true ? <Loading /> : <CharactersList data={filterCharacters} />;
+
   return (
     <>
       <Switch>
@@ -108,11 +115,10 @@ function App() {
             orderCharacters={checkOrderCharacters}
           />
           <ChangePage changePage={handleChangePage} dataPage={page} />
-          <CharactersList data={filterCharacters} />
-          <ChangePage changePage={handleChangePage} dataPage={page} />
+          {printCharacters}
         </Route>
         <Route path='/characters/:id' render={renderCharacterDetail} />
-        <Route path='/gifs' component={GifsRandom}/>
+        <Route path='/gifs' component={GifsRandom} />
       </Switch>
     </>
   );

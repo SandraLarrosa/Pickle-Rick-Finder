@@ -4,15 +4,28 @@ import getGifsApi from '../../data/getGifsApi';
 import TitleMain from '../TitleMain';
 import '../../stylesheets/backgroundSpace.scss';
 import '../../stylesheets/GifsRandom/gifsRandom.scss';
+import Loading from '../Loading';
 
 const GifsRandom = () => {
   const [gifs, setGifs] = useState();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     getGifsApi().then((gif) => {
       setGifs(gif.data.image_url);
+      setLoading(false);
     });
   }, []);
+
+  const printLoader =
+    loading === true ? (
+      <Loading />
+    ) : (
+      <div className='contain__gif'>
+        <img src={`${gifs}`} alt='Gif Rick and Morty'></img>
+      </div>
+    );
 
   const getNewGif = () => {
     getGifsApi().then((gif) => {
@@ -30,9 +43,7 @@ const GifsRandom = () => {
         <div className='button__giveMeMore' onClick={getNewGif}>
           Give Me One More
         </div>
-        <div className='contain__gif'>
-          <img src={`${gifs}`} alt='Gif Rick and Morty'></img>
-        </div>
+        {printLoader}
         <Link to='/characters'>
           <div className='button__goBack'>Go Back</div>
         </Link>

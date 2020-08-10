@@ -1,0 +1,18 @@
+.containLoading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    &__title{
+        font-size: 24px;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__img{
+        width: 250px;
+    }
+}
