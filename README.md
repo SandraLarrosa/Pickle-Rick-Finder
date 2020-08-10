@@ -15,23 +15,29 @@ La evaluación consiste en desarrollar una página web con un listado de persona
 - Checkbox de ordenación de los personajes por orden alfabético.
 - Icono en cada tarjeta de personaje indicando si está muerto.
 
-![Principal page](https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/principal.png)
-![Card Individual](https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/individual.png)
-![Filter](https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/filter.png)
+<div display="flex" flex-direction="column">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/principal.png" width="300" heigth="300">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/individual.png" width="300" heigth="300">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/filter.png" width="300" heigth="300">
+</div>
 
 
 #### Funcionalidades Extras 🌟
  - Home con un Pickle Rick animado que cada 6 segundos se actualiza con un texto nuevo. Para hacerlo se ha utilizado un setInterval que hace llamadas a la [API R&M IPSUM](http://loremricksum.com/documentation/).
-![Pickle Rick](https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/pickleRick.png)
  - Filtrado de personajes por su estatus.
  - Añadido mecanismo de paginación, tanto en la página principal como en las página individual del detalle del personaje, para poder mostrar todos los personajes proporcionados por el API y no solo los 20 primeros.
-![Paginacion](https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/paginacion.png)
-
  - Componente que hace llamadas a la [API GIPHY](https://developers.giphy.com/docs/api#quick-start-guide) para mostrar gifs aleatorios de Rick y Morty.
-![Add Gif](https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/addgif.png)
-![Gifs Page](https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/gifspage.png)
   - Añadido un loading antes de cargar la información de las API.
  
+
+<div display="flex" flex-direction="column">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/pickleRick.png" alt="Imagen Pickle Rick"width="300" heigth="300">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/paginacion.png" width="300" heigth="300">
+</div>
+<div display="flex">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/addgif.png"  width="300" heigth="300">
+    <img src="https://github.com/Adalab/modulo-3-evaluacion-final-SandraLarrosa/blob/master/src/images/README/gifspage.png" width="300" heigth="300">
+</div>
 
   #### Tecnologías utilizadas 💻
 - HTML 5
